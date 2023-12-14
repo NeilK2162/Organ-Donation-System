@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life After Death :: Organ Donation</title>
+    <link rel="icon" href="images/logoX.png" type="image/x-icon" >
+    <style>
+      div{margin-bottom:10px}
+      
+        .back-button {
+            position: fixed;
+            top: 25px;
+            left: 25px;
+            width: 80px;
+            background-color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 75%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-button::before {
+            content: '\276E'; /* Unicode arrow left character */
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+    
+      label
+      {
+      display: inline-block;
+      width: 130px;
+      text-align: left;
+      }
+      html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("images/brandon.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Droid Serif', serif;
+}
+
+#container {
+    background: rgba(50, 55, 56, 0.7);
+    width: 30rem;
+    height: 35rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5rem;
+    height: 6rem;
+    background: rgba(50, 55, 56, 0.7);
+    font-size: 1.9rem;
+    font-weight:bold ;
+    color: #d3d3d3;
+    border-radius: 20px;
+}
+
+fieldset {
+    border: 0;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: #80d0c7;
+    border: 0;
+    display: block;
+    
+    width: 60%;
+    margin-top: 6rem;
+    margin-left: 6rem;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    line-height: 2.5  ;
+    font-size: 18px;
+    border-left: 4px solid;
+    border-color: #80d0c7;
+    padding: 10px;
+    color: white;
+    margin-top: 2.0rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1.2rem;
+    border-color: transparent;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+    #container {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+}
+    @media all and (min-width: 569px) and (max-width: 768px) {
+        #container {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+    }
+    </style>
+  </head>
+  <body>
+
+    <button action="index.html" class="back-button" onclick="goBack()"></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+<div class = "form-center" id="container">
+  <header>Admin Login</header>
+  <form action="adminverify.php" method="post">
+     <fieldset>
+        
+        <input type="email" name="ausername" id="ausername" placeholder="E-mail" required>
+        <br/><br/>
+        <input type="password" name="apass" id="apass" placeholder="Password" required>
+        <br/><br/>
+        <label for="submit"></label>
+        <input type="submit" name="submit" id="submit" value="Login">
+     </fieldset>
+  </form>
+</div>
+
+</body>
+</html>
